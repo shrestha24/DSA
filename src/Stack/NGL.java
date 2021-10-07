@@ -27,13 +27,12 @@ public class NGL {
             }
             st.push(ar[i]);
         }
-
-
         return list;
     }
 
     public static void main(String[] args) {
         int ar[] = {12, 34, 32, 43, 23, 24};
+        //    o/t:  -1, -1, 34, -1, 43, 43
         System.out.println(ngl(ar).toString());
     }
 
