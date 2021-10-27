@@ -9,10 +9,11 @@ public class RainWaterTapping {
         int maxR = Integer.MIN_VALUE;
         int maxL = Integer.MIN_VALUE;
         System.out.println("Hello");
+
         //find max from left
         for (int i = 0; i < ar.length; i++) {
             maxL = Math.max(maxL, ar[i]);
-            greaterLeft[i] =maxL;
+            greaterLeft[i] = maxL;
         }
 
         //find max from right

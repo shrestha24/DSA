@@ -71,7 +71,7 @@ public class Max_Area_Histogram {
 
     public static void main(String[] args) {
         int ar[] = {6, 2, 5, 4, 5, 1, 6};
-              //nsr 7    5   6   5   6   6  7
+              //nsr 7  5  6  5  6  6, 7
         System.out.println(maxAreaHistogram(ar, ar.length));
     }
 }

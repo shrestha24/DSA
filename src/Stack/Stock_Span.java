@@ -6,7 +6,7 @@ import java.util.Stack;
 
 public class Stock_Span {
     // NGL index
-    //Find the consecutive equal or less stocks
+    // Find the consecutive equal or less stocks
     // {100, 80, 60, 70, 60, 75, 85 }
     //    1,  1,  1,  2, 1,  4,   6
 
