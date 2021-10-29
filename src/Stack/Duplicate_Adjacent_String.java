@@ -27,11 +27,6 @@ public class Duplicate_Adjacent_String {
 
         return sb.toString();
 
-
-
-
-
-
     }
 
 }
