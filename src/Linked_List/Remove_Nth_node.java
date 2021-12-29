@@ -6,7 +6,7 @@ public class Remove_Nth_node {
         ListNode fast = start;
         ListNode slow = start;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i <= n; i++) {
             fast = fast.next;
         }
 
