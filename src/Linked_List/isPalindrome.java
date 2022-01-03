@@ -35,6 +35,6 @@ public class isPalindrome {
             prev = head;
             head = next;
         }
-        return prev
+        return prev;
     }
 }
