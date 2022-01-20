@@ -7,25 +7,37 @@ import java.util.Queue;
 
 public class ZigZagTraversal {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root){
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
-        List<List<Integer>> list = new LinkedList<List<Integer>>();
+       Queue<TreeNode> queue = new LinkedList<>();
+       List<List<Integer>> masterList = new ArrayList<>();
 
-        if (root == null)
-            return list;
+       if (root == null)
+           return masterList;
 
-        queue.offer(root);
-        boolean flag = true;
-        while (!queue.isEmpty()){
-            int levelNum = queue.size();
-            List<Integer> sublist = new ArrayList<Integer>(levelNum);
-            for (int i = 0; i < levelNum; i++) {
-                int index = 1;
-                if (queue.peek() != null) queue.offer(queue.peek().left);
-                if (queue.peek() != null) queue.offer(queue.peek().right);
-            }
-            flag = !flag;
-            list.add(sublist);
-        }
-        return list;
+       queue.offer(root);
+       boolean flag = true;
+       while (!queue.isEmpty()){
+          int levelSize =queue.size();
+          List<Integer> sublist = new ArrayList<>();
+           for (int i = 0; i < levelSize; i++) {
+               TreeNode node = queue.poll();
+
+               if (flag){
+                   sublist.add(node.val);
+               }
+               else {
+                   sublist.add(0,node.val);
+               }
+
+                if (node.left != null)
+                    queue.offer(node.left);
+
+                if (node.right != null)
+                    queue.offer(node.right);
+           }
+           masterList.add(sublist);
+           flag = !flag;
+       }
+       return masterList;
     }
+
 }
