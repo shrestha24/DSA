@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class ZigZagTraversal {
+public class  ZigZagTraversal {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root){
        Queue<TreeNode> queue = new LinkedList<>();
        List<List<Integer>> masterList = new ArrayList<>();
