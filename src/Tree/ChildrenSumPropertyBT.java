@@ -1,3 +1,4 @@
+/*
 package Tree;
 
 import com.sun.source.tree.BinaryTree;
@@ -8,6 +9,10 @@ public class ChildrenSumPropertyBT {
         if (root == null)
             return;
         int child = 0;
-        if (root.left)
+
+        if (root.left != null){
+            child += root.left.data;
+        }
     }
 }
+*/
