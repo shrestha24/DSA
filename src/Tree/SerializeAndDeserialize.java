@@ -21,7 +21,7 @@ public class SerializeAndDeserialize {
                 continue;
             }
 
-            str.append(str + " ");
+            str.append(node.val + " ");
             queue.add(root.left);
             queue.add(root.right);
         }
@@ -30,7 +30,7 @@ public class SerializeAndDeserialize {
 
     public TreeNode deserialize(String data){
 
-        if (data == null)
+        if (data == "")
            return null;
 
         Queue<TreeNode> queue = new LinkedList<>();
