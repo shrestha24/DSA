@@ -2,12 +2,13 @@ package graph;
 
 public class DisjointSet {
 
-    //Union
-    /*isCOnnected
+   /* //Union
+isCOnnected
     find
     constructor
     *har node ko root bana na ha aur rank ko 1 rahega
     */
+
 
     public int root[];
     public int rank[];
@@ -35,13 +36,13 @@ public class DisjointSet {
 
 
     public void union(int node1, int node2){
-         /*
-         * find root of both nodes
+        /* * find root of both nodes
          * if root!=
          * check rank
          * >rank make root to that node
          * if rank is equal
          * */
+
 
         int rootX = findRootOfNode(node1);
         int rootY = findRootOfNode(node2);
