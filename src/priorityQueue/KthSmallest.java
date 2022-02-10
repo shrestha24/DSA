@@ -36,5 +36,5 @@ public class KthSmallest {
                                phir loop hoga kth element tak
                                phir return kar dena ha
 
-                              isme iterger hoga
+                               screen share karo dekhhun ky akiye
                           */
