@@ -30,7 +30,7 @@ isCOnnected
     }
 
 
-    public boolean isCOnnected(int node1, int node2){
+    public boolean isConnected(int node1, int node2){
         return findRootOfNode(node1) == findRootOfNode(node2);
     }
 
