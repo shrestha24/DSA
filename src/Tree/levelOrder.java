@@ -35,10 +35,10 @@ public class levelOrder {
         TreeNode node = new TreeNode(1);
         node.left = new TreeNode(2, new TreeNode(4), new TreeNode(5));
         node.right = new TreeNode(3, new TreeNode(6), new TreeNode(7));
-        System.out.println(findLevelOrder(node));
+        System.out.println(findLevelOrderTraversal(node));
     }
 
-    public static List<List<Integer>> findLevelOrder(TreeNode root) {
+    /*public static List<List<Integer>> findLevelOrder(TreeNode root) {
         List<List<Integer>> masterList = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
 
@@ -63,7 +63,7 @@ public class levelOrder {
 
         return masterList;
     }
-
+*/
 
 }
 
