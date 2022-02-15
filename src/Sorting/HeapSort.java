@@ -1,40 +1,41 @@
 package Sorting;
 
 public class HeapSort {
+    void heapsort(int ar[]){
+        int n = ar.length;
 
-    void quicksort(int[] ar, int low, int high){
-        int pivot;
+        for(int i = n / 2-1; i >= 0; i--)
+            heapify(ar, n, i);
 
-        if(high > low){
-            pivot = Partition(ar, low, high);
-            quicksort(ar, low, pivot-1);
-            quicksort(ar, pivot+1, high);
+        for(int i = n-1; i > 0; i --){
+            int temp = ar[0];
+            ar[0] = ar[i];
+            ar[i] = temp;
+
+            heapify(ar, i, 0);
         }
     }
 
-    int Partition(int[] ar, int low, int high){
-        int left = low;
-        int right = high;
-        int pivot = ar[low];
+    private void heapify(int[] ar, int n, int i) {
 
-        while(left < right){
-            while (ar[left] <= pivot)
-                left++;
-            while (ar[right] > pivot)
-                right++;
+        int largest = i;
+        int l = 2*i +1;
+        int r = 2* i +2;
 
-            if(left < right)
-                swap(ar, left,right);
+        if(l < n && ar[l] > ar[largest])
+            largest = l;
+
+        if(r < n && ar[r] > ar[largest])
+            largest = r;
+
+        if(largest != i){
+            int swap = ar[i];
+            ar[i] = ar[largest];
+            ar[largest] = swap;
+
+            heapify(ar, n, largest);
         }
-        ar[low] = ar[right];
-        ar[right] = ar[pivot];
-        return right;
-
     }
 
-    private void swap(int[] ar, int left, int right) {
-        int temp = ar[left];
-        ar[left] = ar[right];
-        ar[right] = temp;
-    }
+
 }
