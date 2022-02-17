@@ -1,5 +1,6 @@
 package BinarySearch;
 
+
 public class SearchInANearlySortedArray {
     int search(int ar[], int target){
         int start = 0;
