@@ -18,7 +18,7 @@ public class MaxSumSubarrayofK {
         for (int i = 0; i < n - k; i++) {     //ye staring i se start hoga aye n - k tak chlaega cos jitna k ha utna tak chaiye
             int sum = 0;
             for (int j = i; j < i + k; j++) {  //j i se start hoga aur ye sum of sub array
-                sum+= ar[j];                     // k consecutive no ka sum hoga
+                sum+= ar[j];                   // k consecutive no ka sum hoga
             }
             max = Math.max(max, sum );           //compare
         }
