@@ -1,32 +1,47 @@
-/*
 package Tree;
 
-import Heap.K_Frequent_Elements;
-import Stack.LongestValidParenthesis;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Queue;
-import java.util.TreeMap;
-
-class Node{
-    TreeNode node;
-    int hd;
-
-    public Node(TreeNode _node, int _hd){
-        hd = _hd;
-        node = _node;
-    }
-}
+import java.util.*;
 
 public class TopViewTraversal {
-    public static ArrayList<Integer> topView(Node root) {
-      ArrayList<Integer> ans = new ArrayList<>();
-      if (root == null)
-          return ans;
+    public class TreeData{
+        int height;
+        TreeNode node;
 
-        Map<Integer, Integer> map = new TreeMap<>();
-        Queue<>
+        public TreeData(int height, TreeNode node){
+            this.height = height;
+            this.node = node;
+        }
+    }
+
+    List<Integer> getBottomView(TreeNode node){
+        List<Integer> masterList = new ArrayList();
+        HashMap<Integer, Integer> hp = new HashMap();
+
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+
+        Queue<TreeData> queue = new LinkedList();
+        queue.offer(new TreeData(0, node));
+
+        while(!queue.isEmpty()){
+            TreeData curr = queue.poll();
+            int height = curr.height;
+            min = Math.min(min, height);
+            max = Math.max(max, height);
+            hp.put(height, curr.node.val);
+
+            if(curr.node.left != null){
+                queue.offer(new TreeData(height-1, curr.node.left));
+            }
+
+            if(curr.node.right != null){
+                queue.offer(new TreeData(height+1, curr.node.right));
+            }
+        }
+        for(int i = min; i <= max; i++){
+            masterList.add(hp.get(i));
+        }
+        return masterList;
     }
 }
-*/

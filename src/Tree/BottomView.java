@@ -38,10 +38,12 @@ public class BottomView{
                 queue.offer(new TreeData(height+1, node.node.right));
             }
 
-            for(int i = min; i <= max; i++){
-                list.add(hm.get(i));
-            }
         }
+
+        for(int i = min; i <= max; i++){
+            list.add(hm.get(i));
+        }
+
         return list;
     }
 

@@ -3,7 +3,7 @@ package Tree;
 import java.util.*;
 
 
-public class VerticalOrderTraversal {
+class VerticalOrderTraversal {
     class Tuple {
         TreeNode node;
         int hlevel;
