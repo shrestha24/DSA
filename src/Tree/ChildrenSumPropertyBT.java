@@ -1,18 +1,31 @@
-/*
 package Tree;
 
-import com.sun.source.tree.BinaryTree;
-import jdk.incubator.vector.VectorOperators;
+class ChildrenSumParent{
+    public static int isSumProperty(TreeNode root){
+      int sum = checkSum(root);
+      if(sum == -1)
+          return 0;
+          else
+              return 1;
+    }
 
-public class ChildrenSumPropertyBT {
-    public static void changeTree(TreeNode <Integer> root) {
-        if (root == null)
-            return;
-        int child = 0;
-
-        if (root.left != null){
-            child += root.left.data;
+    private static int checkSum(TreeNode root) {
+        if(root == null)
+            return 0;
+        int left = checkSum(root.left);
+        if(left == -1)
+            return -1;
+        int right = checkSum(root.right);
+        if(right == -1){
+            return -1;
         }
+        if(left+right==root.val||left==0&&right==0)
+            return root.val;
+
+        return -1;
+    }
+    public static void main(String args[]){
+        TreeNode node=new TreeNode(10,new TreeNode(10),null);
+        System.out.println(isSumProperty(node));
     }
 }
-*/
