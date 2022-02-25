@@ -14,7 +14,8 @@ public class ConstructTreeFromInorderPostorder {
       return root;
     }
 
-    private TreeNode buildTREE(int[] inorder, int inStart, int InEnd, int[] postorder, int postStart, int postEnd, HashMap<Integer, Integer> hm) {
+    private TreeNode buildTREE(int[] inorder, int inStart, int InEnd,
+                               int[] postorder, int postStart, int postEnd, HashMap<Integer, Integer> hm) {
 
         if(inStart > InEnd && postStart > postEnd)
         return null;
