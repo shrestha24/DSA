@@ -25,17 +25,14 @@ public class FindAllPathsFromSourceToTarget {
 
     private void dfs(int node, ArrayList<Integer> list, List<List<Integer>> masterList, int[][] graph) {
         list.add(node);
-        if (node == graph.length - 1){
+        if (node == graph.length - 1) {
             masterList.add(new ArrayList<>(list));
             return;
         }
 
-        for (int neibourNode: graph[node]) {
+        for (int neibourNode : graph[node]) {
             dfs(neibourNode, list, masterList, graph);
             list.remove(list.size() - 1);
         }
-
-
-
     }
 }
