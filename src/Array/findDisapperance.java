@@ -1,7 +1,6 @@
 package Array;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class findDisapperance {
     public List<Integer> findDisappearedNumbers(int[] nums) {
